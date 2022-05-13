@@ -21,3 +21,6 @@ build
 dist
 figs
 *.egg*
+
+# C extensions
+*.so

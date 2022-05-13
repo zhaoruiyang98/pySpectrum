@@ -39,7 +39,7 @@ try:
                     library_dirs = ["/usr/local/lib"],
                     libraries = ['fftw3f'], 
                     include_dirs=[np.get_include(), '/usr/local/include'],
-                    extra_f77_compile_args=['-fcheck=all', '-fallow-argument-mismatch'])
+                    extra_f77_compile_args=['-fcheck=all', '-Wno-argument-mismatch'])
     else: 
         raise KeyError
 except KeyError: 
@@ -49,7 +49,7 @@ except KeyError:
             library_dirs = ["/usr/local/lib"],
             libraries = ['fftw3f'], 
             include_dirs=[np.get_include(), '/usr/local/include'],
-            extra_f77_compile_args=['-fcheck=all', '-fallow-argument-mismatch'])
+            extra_f77_compile_args=['-fcheck=all', '-Wno-argument-mismatch'])
 
 if __name__=="__main__": 
     setup(name = 'pySpectrum',
